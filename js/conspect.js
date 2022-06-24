@@ -1,3 +1,4 @@
+//Количество клиентов в отеле
 /*let clientCounter = 10;
 const maxClients = 25;
 
@@ -6,14 +7,15 @@ while (clientCounter < maxClients) {
   clientCounter += 1;
 }*/
 
+//Длина пароля или строки
 /*let password = '';
-
 do {
   password = prompt('Введите пароль длиннее 4-х символов', '');
 } while (password.length < 5);
 
 console.log('Ввели пароль: ', password);*/
 
+//Цикл фор
 /*for (let i = 0; i <= 10; i += 2) {
   console.log(i);
 }*/
