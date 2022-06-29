@@ -33,20 +33,32 @@ console.log('Total: ', total);*/
 Сумма этих чисел равна 23.
 Найдите сумму всех чисел меньше 1000, кратных 3 или 5.*/
 
-// создать переменные
-const min = 0;
-const max = 10;
-let total = 0;
+//создать переменные
+// const min = 0;
+// const max = 3;
+// let total = 0;
 
 //фор от min до max с шагом 1
-for (let i = min; i < max; i += 1) {
-  if (i % 3 !== 0 && i % 5 !== 0) {
-    continue;
-  }
-  console.log(i);
-  total += i;
-}
-console.log('сумма: ', total);
-// Проверям остаток от деления
+// for (let i = min; i < max; i += 1) {
+//   total += i;
+//   /*if (i % 3 !== 0 && i % 5 !== 0) {
+//     continue;
+//   }*/
+//   console.log(i);
+//total += i;
+//}
+//console.log('сумма: ', total);
+//Проверям остаток от деления
 
 // Пишем сумму
+
+function calculateTotal(3) {
+  let total = 0;
+  for (let i = 0; i <= 3; i += 1) {
+    total += i;
+  }
+  return total;
+  console.log(total);
+}
+//console.log(total);
+//calculateTotal(3);
