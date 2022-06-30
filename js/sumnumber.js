@@ -51,14 +51,15 @@ console.log('Total: ', total);*/
 //Проверям остаток от деления
 
 // Пишем сумму
-
-function calculateTotal(3) {
-  let total = 0;
-  for (let i = 0; i <= 3; i += 1) {
-    total += i;
+let total = 0;
+console.log(total);
+function calculateTotalPrice(order) {
+  for (const value of order) {
+    total += value;
+    console.log(total);
   }
   return total;
-  console.log(total);
 }
-//console.log(total);
-//calculateTotal(3);
+
+calculateTotal([12, 85, 37, 4]);
+console.log(calculateTotal);
