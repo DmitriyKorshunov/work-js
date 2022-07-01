@@ -54,16 +54,18 @@
 // метод массив.includes(значение).
 
 function includes(array, value) {
+  //console.log(typeof value);
   for (let i = 0; i < array.length; i += 1) {
     // console.log(i);
     // console.log(array[i]);
     if (array[i] === value) {
-      //console.log(array[i]);
+      console.log(typeof array[i]);
       //console.log(value);
-      return array[i];
+      return true;
     }
+    return false;
   }
 }
 console.log(includes);
 includes([1, 2, 3, 4, 5], 3);
-includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter');
+//includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter');
