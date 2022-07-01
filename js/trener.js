@@ -54,18 +54,21 @@
 // метод массив.includes(значение).
 
 function includes(array, value) {
-  //console.log(typeof value);
-  for (let i = 0; i < array.length; i += 1) {
-    // console.log(i);
-    // console.log(array[i]);
-    if (array[i] === value) {
-      console.log(typeof array[i]);
-      //console.log(value);
-      return true;
-    }
-    return false;
+  const valueTrue = true;
+  const valuefalse = false;
+  console.log(valueTrue);
+  console.log(valuefalse);
+  for (const arr of array) {
+    console.log(arr);
+    const thereVal = arr === value ? valueTrue : valuefalse;
+    return thereVal;
   }
 }
-console.log(includes);
-includes([1, 2, 3, 4, 5], 3);
-//includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter');
+
+console.log(includes([1, 2, 3, 4, 5], 3));
+//includes([1, 2, 3, 4, 5], 3); // true
+//includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter');// true
+//includes(['apple', 'plum', 'pear', 'orange'], 'plum'); // true
+//includes(['apple', 'plum', 'pear', 'orange'], 'kiwi'); // false
+//includes([1, 2, 3, 4, 5], 17) // false
+//includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") // false
