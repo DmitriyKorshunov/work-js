@@ -74,24 +74,51 @@
 // где имя свойства это имя сотрудника, а значение свойства это зарплата.
 // Функция должна рассчитать общую сумму зарплат сотрудников и вернуть её.
 // Используй переменную totalSalary для хранения общей суммы зарплаты.
-function countTotalSalary(salaries) {
-  let totalSalary = 0;
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
 
-  const keysSalaries = Object.keys(salaries);
-  console.log(keysSalaries);
-  const valueSalaries = Object.values(salaries);
-  console.log(valueSalaries);
+//   const keysSalaries = Object.keys(salaries);
+//   console.log(keysSalaries);
+//   const valueSalaries = Object.values(salaries);
+//   console.log(valueSalaries);
 
-  for (const value of valueSalaries) {
-    console.log(value);
+//   for (const value of valueSalaries) {
+//     console.log(value);
 
-    totalSalary += value;
-  }
+//     totalSalary += value;
+//   }
 
-  return totalSalary;
-}
+//   return totalSalary;
+// }
 
-console.log('сумма зарплат: ', countTotalSalary({}));
+// console.log('сумма зарплат: ', countTotalSalary({}));
 // countTotalSalary({}) возвращает 0
 // countTotalSalary({ mango: 100, poly: 150, alfred: 80 }) возвращает 330
 // countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }) возвращает 400
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+];
+for (const book of books) {
+  // Объект книги
+  //console.log('книги: ', book);
+  // Название
+  console.log(book.title);
+  // Автор
+  //console.log(book.author);
+  // Рейтинг
+  //console.log(book.rating);
+}
