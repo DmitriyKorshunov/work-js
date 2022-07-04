@@ -69,3 +69,29 @@
 // includes(['apple', 'plum', 'pear', 'orange'], 'kiwi'); // false
 // includes([1, 2, 3, 4, 5], 17) // false
 // includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") // false
+
+// Напиши функцию countTotalSalary(salaries) которая принимает объект зарплат,
+// где имя свойства это имя сотрудника, а значение свойства это зарплата.
+// Функция должна рассчитать общую сумму зарплат сотрудников и вернуть её.
+// Используй переменную totalSalary для хранения общей суммы зарплаты.
+function countTotalSalary(salaries) {
+  let totalSalary = 0;
+
+  const keysSalaries = Object.keys(salaries);
+  console.log(keysSalaries);
+  const valueSalaries = Object.values(salaries);
+  console.log(valueSalaries);
+
+  for (const value of valueSalaries) {
+    console.log(value);
+
+    totalSalary += value;
+  }
+
+  return totalSalary;
+}
+
+console.log('сумма зарплат: ', countTotalSalary({}));
+// countTotalSalary({}) возвращает 0
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 }) возвращает 330
+// countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }) возвращает 400
