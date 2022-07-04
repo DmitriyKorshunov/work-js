@@ -53,22 +53,19 @@
 // При выполнении этой задачи в теле функции includes() нельзя использовать
 // метод массив.includes(значение).
 
-function includes(array, value) {
-  const valueTrue = true;
-  const valuefalse = false;
-  console.log(valueTrue);
-  console.log(valuefalse);
-  for (const arr of array) {
-    console.log(arr);
-    const thereVal = arr === value ? valueTrue : valuefalse;
-    return thereVal;
-  }
-}
+// function includes(array, value) {
+//   for (const arr of array) {
+//     if (arr === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
 
-console.log(includes([1, 2, 3, 4, 5], 3));
-//includes([1, 2, 3, 4, 5], 3); // true
-//includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter');// true
-//includes(['apple', 'plum', 'pear', 'orange'], 'plum'); // true
-//includes(['apple', 'plum', 'pear', 'orange'], 'kiwi'); // false
-//includes([1, 2, 3, 4, 5], 17) // false
-//includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") // false
+// console.log(includes(['apple', 'plum', 'pear', 'orange'], 'kiwi'));
+// includes([1, 2, 3, 4, 5], 3); // true
+// includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter');// true
+// includes(['apple', 'plum', 'pear', 'orange'], 'plum'); // true
+// includes(['apple', 'plum', 'pear', 'orange'], 'kiwi'); // false
+// includes([1, 2, 3, 4, 5], 17) // false
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus") // false
