@@ -95,30 +95,50 @@
 // countTotalSalary({}) возвращает 0
 // countTotalSalary({ mango: 100, poly: 150, alfred: 80 }) возвращает 330
 // countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }) возвращает 400
-const books = [
-  {
-    title: 'The Last Kingdom',
-    author: 'Bernard Cornwell',
-    rating: 8.38,
-  },
-  {
-    title: 'Beside Still Waters',
-    author: 'Robert Sheckley',
-    rating: 8.51,
-  },
-  {
-    title: 'The Dream of a Ridiculous Man',
-    author: 'Fyodor Dostoevsky',
-    rating: 7.75,
-  },
+
+//Массив однотипных объектов
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+// ];
+// for (const book of books) {
+//   Объект книги
+//   console.log('книги: ', book);
+//   Название
+//   console.log(book.title);
+//   Автор
+//   console.log(book.author);
+//   Рейтинг
+//   console.log(book.rating);
+// }
+
+// ПЕРЕБОР массива однотипных объектов
+const colors = [
+  { hex: '#f44336', rgb: '244,67,54' },
+  { hex: '#2196f3', rgb: '33,150,243' },
+  { hex: '#4caf50', rgb: '76,175,80' },
+  { hex: '#ffeb3b', rgb: '255,235,59' },
 ];
-for (const book of books) {
-  // Объект книги
-  //console.log('книги: ', book);
-  // Название
-  console.log(book.title);
-  // Автор
-  //console.log(book.author);
-  // Рейтинг
-  //console.log(book.rating);
+
+const hexColors = [];
+const rgbColors = [];
+
+for (const color of colors) {
+  hexColors.push(color.hex);
+  rgbColors.push(color.rgb);
 }
+console.table(hexColors);
+console.log(rgbColors);
