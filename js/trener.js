@@ -150,12 +150,20 @@ const products = [
   { name: 'Grip', price: 1200, quantity: 9 },
 ];
 
-function getProductPrice(productName) {
+function getAllPropValues(propName) {
   // Change code below this line
-  let ollValProd = [];
+  let allPropVal = [];
   for (const product of products) {
-    ollValProd.push(product.productName);
-    console.log(ollValProd);
+    const keys = Object.keys(product);
+    for (const key of keys) {
+      if (key === propName) {
+        allPropVal.push(product[propName]);
+      }
+    }
+  }
+  return allPropVal;
+
+  // Change code above this line
 }
-console.log(getProductPrice('price'));
+console.log(getAllPropValues('price'));
 ///getAllPropValues('name');
