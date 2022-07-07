@@ -143,27 +143,46 @@
 // console.table(hexColors);
 // console.log(rgbColors);
 
-const products = [
-  { name: 'Radar', price: 1300, quantity: 4 },
-  { name: 'Scanner', price: 2700, quantity: 3 },
-  { name: 'Droid', price: 400, quantity: 7 },
-  { name: 'Grip', price: 1200, quantity: 9 },
-];
+//возврат массива значений по ключу объектов
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
 
-function getAllPropValues(propName) {
-  // Change code below this line
-  let allPropVal = [];
-  for (const product of products) {
-    const keys = Object.keys(product);
-    for (const key of keys) {
-      if (key === propName) {
-        allPropVal.push(product[propName]);
+// function getAllPropValues(propName) {
+//   // Change code below this line
+//   let allPropVal = [];
+//   for (const product of products) {
+//     const keys = Object.keys(product);
+//     for (const key of keys) {
+//       if (key === propName) {
+//         allPropVal.push(product[propName]);
+//       }
+//     }
+//   }
+//   return allPropVal;
+
+//   // Change code above this line
+// }
+// console.log(getAllPropValues('price'));
+//getAllPropValues('name');
+
+// Одинаковые числа в двух массивах из общих аргументов
+function findMatches(array, ...args) {
+  console.log(args);
+  console.log(array);
+  const matches = [];
+  for (let i = 0; i < array.length; i += 1) {
+    for (let j = 0; j < args.length; j += 1) {
+      if (array[i] === args[j]) {
+        matches.push(array[i]);
       }
     }
   }
-  return allPropVal;
-
-  // Change code above this line
+  return matches;
 }
-console.log(getAllPropValues('price'));
-///getAllPropValues('name');
+console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
+//findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) возвращает [1, 2]
+//findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2) возвращает [17, 89, 2]
