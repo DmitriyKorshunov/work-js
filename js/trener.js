@@ -170,19 +170,114 @@
 //getAllPropValues('name');
 
 // Одинаковые числа в двух массивах из общих аргументов
-function findMatches(array, ...args) {
-  console.log(args);
-  console.log(array);
-  const matches = [];
-  for (let i = 0; i < array.length; i += 1) {
-    for (let j = 0; j < args.length; j += 1) {
-      if (array[i] === args[j]) {
-        matches.push(array[i]);
-      }
-    }
-  }
-  return matches;
-}
-console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
+// function findMatches(array, ...args) {
+//   console.log(args);
+//   console.log(array);
+//   const matches = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     for (let j = 0; j < args.length; j += 1) {
+//       if (array[i] === args[j]) {
+//         matches.push(array[i]);
+//       }
+//     }
+//   }
+//   return matches;
+// }
+// console.log(findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2));
 //findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) возвращает [1, 2]
 //findMatches([4, 89, 17, 36, 2], 8, 17, 89, 27, 2) возвращает [17, 89, 2]
+
+const users = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+    age: 37,
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female',
+    age: 34,
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male',
+    age: 24,
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female',
+    age: 21,
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male',
+    age: 27,
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male',
+    age: 38,
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female',
+    age: 39,
+  },
+];
+const getUsersWithFriend = (users, friendName) => {
+  for (const user of users) {
+    console.log(user);
+    let friendUser = user.flatMap(user => user.friends);
+
+    console.log(friend);
+  }
+};
+
+// const allFriendUser = users.flatMap(users => users.friends);
+// console.log(allFriendUser);
+// const uniqueFriendUser = allFriendUser.filter(
+//   (friend, index, array) => array.indexOf(friend) === index
+// );
+// console.log(uniqueFriendUser);
+// const uniqueFriend = uniqueFriendUser.filter(friend => friend === friendName);
+// return uniqueFriend;
+
+console.log(getUsersWithFriend(users, 'Briana Decker'));
+// Если значение параметра friendName это строка "Briana Decker",
+// функция возвращает массив объектов пользователей с именами Sharlene Bush
+// и Sheree Anthony
