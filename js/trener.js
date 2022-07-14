@@ -260,24 +260,17 @@ const users = [
   },
 ];
 const getUsersWithFriend = (users, friendName) => {
-  for (const user of users) {
-    console.log(user);
-    let friendUser = user.flatMap(user => user.friends);
-
-    console.log(friend);
-  }
+  const friendUser = users.filter(user => user.friends.includes(friendName));
+  console.log(friendUser);
+  return friendUser.map(friendUser => friendUser.name);
+  //return users.filter(user => user.friends.includes(friendName)).map(user => user.name);
 };
 
-// const allFriendUser = users.flatMap(users => users.friends);
-// console.log(allFriendUser);
-// const uniqueFriendUser = allFriendUser.filter(
-//   (friend, index, array) => array.indexOf(friend) === index
-// );
-// console.log(uniqueFriendUser);
-// const uniqueFriend = uniqueFriendUser.filter(friend => friend === friendName);
-// return uniqueFriend;
-
 console.log(getUsersWithFriend(users, 'Briana Decker'));
+
+//
 // Если значение параметра friendName это строка "Briana Decker",
 // функция возвращает массив объектов пользователей с именами Sharlene Bush
 // и Sheree Anthony
+// Если значение параметра friendName это строка "Adrian Cross",
+// функция возвращает пустой массив
